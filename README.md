@@ -45,4 +45,4 @@ The instrumentation records the stack trace from the exception for case (1). How
 
 It appears, it's required to manually record the stack trace to capture any exceptions handled internally by the application.
 
-For example traces from each of the above scenarios, see ./examples.
+For example traces from each of the above scenarios, see [examples](./examples).
