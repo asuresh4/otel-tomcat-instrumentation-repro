@@ -37,9 +37,9 @@ The applications spins up 3 endpoints.
 3. http://localhost:8080/helloworld-servlet/hello?error=custom-updated-span
 
 
-http://localhost:8080/helloworld-servlet/hello?error=runtime - triggers a runtime exception. [Example trace](./examples/trace-runtime-exception.json).
-http://localhost:8080/helloworld-servlet/hello?error=custom - triggers a custom exception that’s handled in the application but response.setStatus(500); is set. [Example trace](./examples/trace-custom-exception.json).
-http://localhost:8080/helloworld-servlet/hello?error=custom-updated-span - triggers a custom exception just like in (2) but manually record exception by getting the current span. [Example trace](./traces/trace-custom-exception-manual-instrumentation).
+- http://localhost:8080/helloworld-servlet/hello?error=runtime - triggers a runtime exception. [Example trace](./examples/trace-runtime-exception.json).
+- http://localhost:8080/helloworld-servlet/hello?error=custom - triggers a custom exception that’s handled in the application but response.setStatus(500); is set. [Example trace](./examples/trace-custom-exception.json).
+- http://localhost:8080/helloworld-servlet/hello?error=custom-updated-span - triggers a custom exception just like in (2) but manually record exception by getting the current span. [Example trace](./traces/trace-custom-exception-manual-instrumentation).
 
 The instrumentation records the stack trace from the exception for case (1). However, it did not record the exception automatically for case (2).
 
